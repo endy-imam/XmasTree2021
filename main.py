@@ -6,6 +6,7 @@ from math import sqrt, atan, atan2, cos, sin
 
 
 Vector = namedtuple('Vector', 'x, y, z')
+Color = namedtuple('Color', 'r, g, b')
 
 
 def read_csv(path: str) -> List[Vector]:
@@ -50,8 +51,42 @@ def convert_vectors_to_complex(positions: List[Vector]) -> List[complex]:
     return complex_list
 
 
+def clamp(val, low=0, high=1):
+    return low if val < low else high if val > high else val
+
+
+def write_frames_to_csv(
+        frames: List[List[Color]],
+        path: str='./outputs/res.csv') -> None:
+    """Output frames into csv file.
+
+    Args:
+        frames (List[List[Color]]): Input frames.
+        path (str, optional): Path for output csv file.
+            Defaults to './outputs/res.csv'.
+    """
+    count = len(frames[0])
+    header = ['FRAME_ID'] + [f'{C}_{i}' for i in range(count) for C in 'RGB']
+
+    lines = [header]
+    for i, frame in enumerate(frames):
+        line = [i] + [int(clamp(c) * 255) for rgb in frame for c in rgb]
+        lines.append([str(val) for val in line])
+
+    with open(path, 'w') as file:
+        file.write('\n'.join(','.join(line) for line in lines))
+
+
 COORDS_CSV_INPUT_FILE = "./coords_2021.csv"
 
 if __name__ == "__main__":
-    input_coordinates = read_csv(COORDS_CSV_INPUT_FILE)
-    mapped_complex_values = convert_vectors_to_complex(input_coordinates)
+    positions = read_csv(COORDS_CSV_INPUT_FILE)
+    mapped_complex_values = convert_vectors_to_complex(positions)
+    height = max(position.z for position in positions)
+    slope = sqrt(height * height + 1)
+    output_colors = [
+        Color((x + 1) / 2, (y + 1) / 2, z / height)
+        for x, y, z in positions
+    ]
+    output_frames = [output_colors]
+    write_frames_to_csv(output_frames)
