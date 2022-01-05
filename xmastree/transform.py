@@ -2,7 +2,7 @@ from typing import List
 
 from math import sqrt, atan, atan2, cos, sin
 
-from datatypes import Vector
+from .datatypes import Vector
 
 
 def convert_vectors_to_complex(positions: List[Vector]) -> List[complex]:

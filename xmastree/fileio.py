@@ -2,8 +2,8 @@ from typing import List
 
 from csv import reader
 
-from datatypes import Vector, Animation
-from utils import clamp
+from .datatypes import Vector, Animation
+from .utils import clamp
 
 
 def read_csv(path: str) -> List[Vector]:
@@ -23,15 +23,12 @@ def read_csv(path: str) -> List[Vector]:
     return positions
 
 
-def write_frames_to_csv(
-        frames: Animation,
-        path: str='./outputs/res.csv') -> None:
+def write_frames_to_csv(frames: Animation, path: str) -> None:
     """Output frames into csv file.
 
     Args:
         frames (Animation): Input frames.
-        path (str, optional): Path for output csv file.
-            Defaults to './outputs/res.csv'.
+        path (str): Path for output csv file.
     """
     count = len(frames[0])
     header = ['FRAME_ID'] + [f'{C}_{i}' for i in range(count) for C in 'RGB']
