@@ -31,10 +31,16 @@ $ python -m unittest discover -vs test
 
 ## Project Structure
 
-```s
+```s.
 ├── LICENSE
 ├── README.md
 ├── coords_2021.csv
+├── test
+│   ├── ___init__.py
+│   └── mathutils
+│       ├── __init__.py
+│       ├── test_polynomial.py
+│       └── test_utils.py
 └── xmastree
     ├── __init__.py
     ├── __main__.py

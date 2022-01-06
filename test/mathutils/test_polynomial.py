@@ -60,7 +60,3 @@ class TestPolynomial(unittest.TestCase):
         self.assertIsInstance(f, Polynomial)
         self.assertEqual(f.coeffs, [-1, 0, 0, 0, 1])
         self.assertTrue(all(f(root) == 0 for root in roots))
-        
-
-if __name__ == '__main__':
-    unittest.main()

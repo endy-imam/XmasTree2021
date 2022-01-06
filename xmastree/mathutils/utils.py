@@ -1,4 +1,4 @@
-from math import sqrt
+from math import sqrt, sin, cos
 from numbers import Real
 
 
@@ -12,6 +12,9 @@ def complex_magnitude(z: complex) -> Real:
         float: distance from origin (0+0j)
     """
     return sqrt(z.real * z.real + z.imag * z.imag)
+
+def complex_polar(mag: Real, rad: Real) -> complex:
+    return mag * complex(cos(rad), sin(rad))
 
 
 def clamp(val: Real, low: Real=0.0, high: Real=1.0) -> Real:
