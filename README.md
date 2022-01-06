@@ -23,6 +23,12 @@ It is based on the work by [Matt Parker](https://www.youtube.com/channel/UCSju5G
 $ python -m xmastree
 ```
 
+### Testing
+
+```s
+$ python -m unittest discover -vs test
+```
+
 ## Project Structure
 
 ```s

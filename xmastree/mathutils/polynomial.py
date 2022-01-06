@@ -44,14 +44,18 @@ class Polynomial(NamedTuple):
     def __repr__(self) -> str:
         """String representation in Polynomial
         """
-        repr: str = '0'
-        if self.coeffs:
-            nomials: List[str] = []
-            for i, n in enumerate(self.coeffs):
-                if n == 0:
-                    continue
-                xn = f'{self.var}^{i}' if i > 1 else self.var if i else ''
-                n = n if isinstance(n, complex) or n >= 0 else f'({n})'
-                nomials.append(f'{n}{xn}')
-            repr = " + ".join(reversed(nomials))
-        return f'{self.__class__.__name__}({repr})'
+        return f'{self.__class__.__name__}({str(self)})'
+
+    def __str__(self) -> str:
+        """String output in Polynomial
+        """
+        if len(self.coeffs) == 0:
+            return '0'
+        nomials: List[str] = []
+        for i, n in enumerate(self.coeffs):
+            if n == 0:
+                continue
+            xn = f'{self.var}^{i}' if i > 1 else self.var if i else ''
+            n = n if isinstance(n, complex) or n >= 0 else f'({n})'
+            nomials.append(f'{n}{xn}')
+        return " + ".join(reversed(nomials))
