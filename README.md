@@ -7,6 +7,8 @@ It is based on the work by [Matt Parker](https://www.youtube.com/channel/UCSju5G
 ## Todo
 
 [ ] Newton Fractal Animation
+    [x] Polynomial
+        [ ] Polynomial from Roots
     [ ] Voronoi Diagram
         [x] Complex Number Magnitude
     [ ] Coloring
@@ -32,6 +34,9 @@ $ python -m xmastree
     ├── __main__.py
     ├── datatypes.py
     ├── fileio.py
-    ├── transform.py
-    └── utils.py
+    ├── mathutils
+    │   ├── __init__.py
+    │   ├── polynomial.py
+    │   └── utils.py
+    └── transform.py
 ```

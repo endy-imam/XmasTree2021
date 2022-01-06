@@ -3,7 +3,7 @@ from typing import List
 from csv import reader
 
 from .datatypes import Vector, Animation
-from .utils import clamp
+from .mathutils.utils import clamp
 
 
 def read_csv(path: str) -> List[Vector]:
