@@ -4,6 +4,17 @@ This repo contains the code for my take on [the computational illumination of a 
 
 It is based on the work by [Matt Parker](https://www.youtube.com/channel/UCSju5G2aFaWMqn-_0YBtq5A) from [@standupmaths](https://github.com/standupmaths/), and his video ["I wired my tree with 500 LED lights and calculated their 3D coordinates"](https://www.youtube.com/watch?v=TvlpIojusBE).
 
+## Todo
+
+[ ] Newton Fractal Animation
+    [ ] Voronoi Diagram
+        [x] Complex Number Magnitude
+    [ ] Coloring
+    [ ] Newton's Method
+[ ] Command Line Input
+    [ ] File Input
+    [ ] File Output
+
 ## Usage
 
 ```s
