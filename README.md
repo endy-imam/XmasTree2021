@@ -8,7 +8,7 @@ It is based on the work by [Matt Parker](https://www.youtube.com/channel/UCSju5G
 
 [ ] Newton Fractal Animation
     [x] Polynomial
-        [ ] Polynomial from Roots
+        [x] Polynomial from Roots
     [ ] Voronoi Diagram
         [x] Complex Number Magnitude
     [ ] Coloring

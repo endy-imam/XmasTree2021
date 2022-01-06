@@ -15,13 +15,34 @@ class Polynomial(NamedTuple):
 
     coeffs: Sequence[Number]
     var: str = 'x'
+
+    @classmethod
+    def from_roots(cls, *roots: Number, var: str = 'x') -> Polynomial:
+        """Creates polynomial given the input roots
+        
+        Creates a polynomial P where for every given root r such that
+        P(r) equals 0. (Maybe there are more roots that might not be
+        part of the original inputs of roots.)
+
+        Args:
+            *roots (Tuple[Number]): Tuple of roots for the polynomail
+
+        Returns:
+            Polynomial: Resulting polynomial
+        """
+        coeffs = [1] + [0] * len(roots)
+        for i, root in enumerate(roots):
+            for j in range(i, -1, -1):
+                coeffs[j + 1] += coeffs[j]
+                coeffs[j] *= -root
+        return Polynomial(coeffs, var)
     
     @property
     def d(self) -> Polynomial:
         """Derivative of the polynomial
         """
         return Polynomial(
-            [c * i for i, c in enumerate(self.coeffs[1:], 1)],
+            [c * i for i, c in enumerate(self.coeffs[1:], start=1)],
             var=self.var
         )
 
