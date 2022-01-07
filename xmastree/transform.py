@@ -6,13 +6,13 @@ from xmastree.datatypes.vector import Vector
 
 
 def convert_vectors_to_complex(positions: List[Vector]) -> List[complex]:
-    """Convert list of positions on tree to mapped complex point on cone
+    """Convert list of positions on tree to complex point on cone.
 
     Args:
-        positions (List[Vector]): List of positions on tree
+        positions (List[Vector]): List of positions on tree.
 
     Returns:
-        List[complex]: List of complex points on cone
+        List[complex]: List of complex points on cone.
     """
     height = max(position.z for position in positions)
     rad_from_tip = atan(1 / height)
