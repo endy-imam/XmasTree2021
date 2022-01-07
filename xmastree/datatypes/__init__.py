@@ -1,7 +1,6 @@
 from typing import List
 
-from .color import Color
-from .vector import Vector
+from colour import Color
 
 
 Frame = List[Color]

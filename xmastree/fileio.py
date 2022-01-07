@@ -2,8 +2,8 @@ from typing import List
 
 from csv import reader
 
-from .datatypes import Vector, Animation
-from .mathutils.utils import clamp
+from .datatypes import Animation
+from .datatypes.vector import Vector
 
 
 def read_csv(path: str) -> List[Vector]:
@@ -35,7 +35,7 @@ def write_frames_to_csv(frames: Animation, path: str) -> None:
 
     lines = [header]
     for i, frame in enumerate(frames):
-        line = [i] + [int(clamp(c) * 255) for rgb in frame for c in rgb]
+        line = [i] + [int(c * 255) for rgb in frame for c in rgb.rgb]
         lines.append([str(val) for val in line])
 
     with open(path, 'w') as file:

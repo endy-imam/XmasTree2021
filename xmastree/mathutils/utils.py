@@ -21,7 +21,7 @@ def clamp(val: Real, low: Real=0.0, high: Real=1.0) -> Real:
     """Clamp value into a given inclusive boundary
     
     Args:
-        val (Real): [description]
+        val (Real): input value
         low (Real, optional): Minimum value. Defaults to 0.0.
         high (Real, optional): Maximum value. Defaults to 1.0.
 

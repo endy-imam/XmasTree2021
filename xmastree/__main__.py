@@ -1,6 +1,8 @@
 from math import sqrt
 
-from .datatypes import Color, Frame, Animation
+from colour import Color
+
+from .datatypes import Frame, Animation
 
 from .fileio import read_csv, write_frames_to_csv
 from .transform import convert_vectors_to_complex
@@ -20,7 +22,7 @@ if __name__ == "__main__":
     height = max(position.z for position in positions)
     slope = sqrt(height * height + 1)
     output_colors: Frame = [
-        Color((x + 1) / 2, (y + 1) / 2, z / height)
+        Color(rgb=[(x + 1) / 2, (y + 1) / 2, z / height])
         for x, y, z in positions
     ]
     output_frames: Animation = [output_colors]
