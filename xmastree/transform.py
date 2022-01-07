@@ -2,7 +2,7 @@ from typing import List
 
 from math import sqrt, atan, atan2, cos, sin
 
-from .datatypes.vector import Vector
+from xmastree.datatypes.vector import Vector
 
 
 def convert_vectors_to_complex(positions: List[Vector]) -> List[complex]:

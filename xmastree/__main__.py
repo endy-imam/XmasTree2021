@@ -1,10 +1,10 @@
-from .fileio import read_csv, write_frames_to_csv
+from xmastree.fileio import read_csv, write_frames_to_csv
 
-from .animations.rainbow import animate
+from xmastree.animations.rainbow import animate
 
 
 COORDS_CSV_INPUT_FILE = "./coords_2021.csv"
-ANIMATION_CSV_OUTPUT_FILE = "./outputs/res.csv"
+ANIMATION_CSV_OUTPUT_FILE = "./outputs/rainbow.csv"
 
 if __name__ == "__main__":
     """Reads the GIFT file (input CSV) and output animation (output CSV)

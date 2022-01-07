@@ -2,8 +2,8 @@ from typing import List
 
 from csv import reader
 
-from .datatypes import Animation
-from .datatypes.vector import Vector
+from xmastree.datatypes import Animation
+from xmastree.datatypes.vector import Vector
 
 
 def read_csv(path: str) -> List[Vector]:

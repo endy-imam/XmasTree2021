@@ -4,11 +4,11 @@ from math import atan2, pi, sqrt
 
 from colour import Color
 
-from ..datatypes import Frame, Animation
-from ..datatypes.vector import Vector
+from xmastree.datatypes import Frame, Animation
+from xmastree.datatypes.vector import Vector
 
-from ..mathutils.utils import clamp, complex_magnitude, remap
-from ..transform import convert_vectors_to_complex
+from xmastree.mathutils.utils import clamp, complex_magnitude, remap
+from xmastree.transform import convert_vectors_to_complex
 
 
 def animate(positions: List[Vector]) -> Animation:
