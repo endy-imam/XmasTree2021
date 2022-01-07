@@ -13,6 +13,6 @@ class Vector(NamedTuple):
         z (Real, optional): Z component of the vector.
             Defaults to 0.0.
     """
-    x: Real = 0.0
-    y: Real = 0.0
-    z: Real = 0.0
+    x: Real = 0
+    y: Real = 0
+    z: Real = 0

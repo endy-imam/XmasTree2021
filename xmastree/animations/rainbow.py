@@ -23,9 +23,8 @@ def animate(positions: List[Vector]) -> Animation:
     
     frames: Animation = []
     for i in range(FRAME_COUNT):
-        complex_t = [*complex]
         frame: Frame = []
-        for c in complex_t:
+        for c in complex:
             dist = complex_magnitude(c)
             rev = remap(atan2(c.imag, c.real), -pi, pi)
             r_delta = i / FRAME_COUNT

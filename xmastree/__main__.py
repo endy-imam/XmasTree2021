@@ -4,13 +4,13 @@ from xmastree.animations.rainbow import animate
 
 
 COORDS_CSV_INPUT_FILE = "./coords_2021.csv"
-ANIMATION_CSV_OUTPUT_FILE = "./outputs/rainbow.csv"
+ANIMATION_CSV_OUTPUT_FILE = "./outputs/res.csv"
 
 if __name__ == "__main__":
-    """Reads the GIFT file (input CSV) and output animation (output CSV)
+    """Reads the input CSV positions and output CSV animation.
 
     TODO: Maybe make a command program to take file input 
-        and output path
+        and output path.
     """
     positions = read_csv(COORDS_CSV_INPUT_FILE)
     output_frames = animate(positions)
