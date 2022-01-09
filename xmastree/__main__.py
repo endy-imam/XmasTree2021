@@ -1,10 +1,10 @@
 from xmastree.fileio import read_csv, write_frames_to_csv
 
-from xmastree.animations.voronoi import animate
+from xmastree.animations.newton import animate
 
 
 COORDS_CSV_INPUT_FILE = "./coords_2021.csv"
-ANIMATION_CSV_OUTPUT_FILE = "./outputs/res.csv"
+ANIMATION_CSV_OUTPUT_FILE = "./outputs/ret.csv"
 
 if __name__ == "__main__":
     """Reads the input CSV positions and output CSV animation.
