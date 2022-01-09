@@ -4,7 +4,7 @@ from xmastree.animations.newton import animate
 
 
 COORDS_CSV_INPUT_FILE = "./coords_2021.csv"
-ANIMATION_CSV_OUTPUT_FILE = "./outputs/ret.csv"
+ANIMATION_CSV_OUTPUT_FILE = "./outputs/res.csv"
 
 if __name__ == "__main__":
     """Reads the input CSV positions and output CSV animation.
