@@ -1,6 +1,6 @@
 from xmastree.fileio import read_csv, write_frames_to_csv
 
-from xmastree.animations.pointmove import animate
+from xmastree.animations.voronoi import animate
 
 
 COORDS_CSV_INPUT_FILE = "./coords_2021.csv"
